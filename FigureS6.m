@@ -38,9 +38,9 @@ a3 = 1; %Weighting on negative impact of leukaemia
 
 %Minimum (lower) and maximum (upper) admissable controls (bounds). 
 Ulower = 0; %Lower bound on chemotherapy control
-Uupper = 0.3; %Upper bound on chemotherapy control
+Uupper = 0.1; %Upper bound on chemotherapy control
 Vlower = 0; %Lower bound on stem cell transplant control
-Vupper = 0.5; %Upper bound on stem cell transplant control
+Vupper = 0.1; %Upper bound on stem cell transplant control
 
 
 %Initialisation of the state. 
