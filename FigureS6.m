@@ -104,10 +104,10 @@ Uupdate = max(Uupper*((sign((-y(1,:).*kappa.*Lambda(1,:)-y(2,:).*Lambda(2,:)+a1)
     Ulower*((sign((-y(1,:).*kappa.*Lambda(1,:)-y(2,:).*Lambda(2,:)+a1))+1)/(2))); %Determine updated bang-bang chemotherapy control
 U = omega1*U + (1-omega1)*Uupdate; %Actual updated control after applying relaxation to aid convergence
 
-Vupdate = max(min(Vupper,-0.5*Lambda(1,:)/a2),Vlower); %Determine updated continuous chemotherapy control
+Vupdate = max(min(Vupper,-0.5*Lambda(1,:)/a2),Vlower); %Determine updated continuous stem cell transplant control
 V = omega2*V + (1-omega2)*Vupdate; %Actual updated control after applying relaxation to aid convergence
 
-% %To view the solution as it converges, uncomment this block (line XXX to line YYY) to produce interim
+% %To view the solution as it converges, uncomment this block (line 113 to line 126) to produce interim
 % %figures
  
 % box on
