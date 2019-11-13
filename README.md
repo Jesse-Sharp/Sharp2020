@@ -7,6 +7,6 @@ The supplied parameters in this code specifically generate Figure S6(a). Results
 
 This particular code example is provided as it demonstrates implementation of both bang-bang control and bounded continuous control. To solve for alternative chemotherapy and stem cell transplant control formulations, Line 103 and Line 107 can be modified, respectively. For example, the results in Figure S4 of the Supplementary material by Sharp et al. can be recovered by setting: 
 
-Line 103 to Uupdate = max(min(Uupper,0.5\*(y(1,:).\*kappa.\*Lambda(1,:)+y(2,:).\*Lambda(2,:))/a1),Ulower); 
+Line 107 to Vupdate = max(Vupper\*((sign((a2+Lambda(1,:)))-1)/(-2)),Vlower\*((sign((a2+Lambda(1,:)))+1)/(2)));
 
-and Line 107 to Vupdate = max(Vupper\*((sign((a2+Lambda(1,:)))-1)/(-2)),Vlower\*((sign((a2+Lambda(1,:)))+1)/(2))). 
+and Line 103 to Uupdate = max(min(Uupper,0.5\*(y(1,:).\*kappa.\*Lambda(1,:)+y(2,:).\*Lambda(2,:))/a1),Ulower);
