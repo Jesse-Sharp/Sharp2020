@@ -125,6 +125,16 @@ V = omega2*V + (1-omega2)*Vupdate; %Actual updated control after applying relaxa
 % hold off
 % drawnow 
 
+% if either control update is identically zero after several iterations,
+% update directly and flag as converged
+if iterations > 150 && max(Vupdate) == 0
+    V = Vupdate;
+end
+
+if iterations > 150 && max(Uupdate) == 0
+    U = Uupdate;
+end
+
 %Check for convergence
 RelTolTestU = RelTol*norm(U) - norm(U-uold);
 RelTolStoreU = [RelTolStoreU RelTolTestU];
@@ -132,7 +142,7 @@ RelTolStoreU = [RelTolStoreU RelTolTestU];
 RelTolTestV = RelTol*norm(V) - norm(V-vold);
 RelTolStoreV = [RelTolStoreV RelTolTestV];
 
-if RelTolTestU > 0 && RelTolTestV > 0
+if RelTolTestU >= 0 && RelTolTestV >= 0
     fprintf('Specified relative tolerance of %g has been met \n\r',RelTol)
     break
 end  
