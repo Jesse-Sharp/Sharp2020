@@ -23,10 +23,10 @@ ps = 0.5; %Proliferation of S
 pa = 0.43; %Proliferation of A
 pl = 0.27; %Proliferation of L
 gs = 0.14; %Differentiation of S to A
-ga = 0.44; %Differentiation of A to D
-gl = 0.05; %Differentiation of L to T
-ux = 0.275; %Migration of D into the blood stream
-ut = 0.3; %Migration of T into the blood stream
+ga = 0.44; %Differentiation of A 
+gl = 0.05; %Differentiation of L 
+
+
 Alpha = 0.015; %Michaelis-Menten kinetic parameter alpha
 Gamma = 0.1; %Michaelis-Menten kinetic parameter gamma
 kappa = 1; %Rate chemotherapy control kills progenitor blood cells relative to leukaemic cells
