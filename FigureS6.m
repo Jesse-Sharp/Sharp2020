@@ -8,7 +8,7 @@
 clear
             
 Tfinal = 20;  %Specified final time
-dt = 0.0001; %Time-step
+dt = 0.001; %Time-step
 N = floor(Tfinal/dt+1); %Number of nodes in time discretisation
 t_y = linspace(0,Tfinal,N); %Time discretisation for plotting
 omega1 = 0.97; %Portion of previous iteration's control maintained when updating control u
