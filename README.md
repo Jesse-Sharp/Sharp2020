@@ -1,5 +1,7 @@
 # Sharp2020
-Matlab implementation of the forward backward sweep method for multiple optimal controls. This code is used to generate results in Figure S6 of the Supplementary material by Sharp et al.
+Matlab implementation of the forward backward sweep method for multiple optimal controls. This code is used to generate results in Figure S6 of the Supplementary material by Sharp et al. in:
+
+Sharp JA, Browning AP, Mapder T, Baker CM, Burrage K, Simpson MJ. 2020 Designing combination therapies using multiple optimal controls.  _Journal of Theoretical Biology_ **497**, 110277. (doi.org/10.1016/j.jtbi.2020.110277).
 
 The pay-off considered in this code corresponds to the case where the chemotherapy control is bang-bang and the stem cell transplant control is bounded continuous. 
 
